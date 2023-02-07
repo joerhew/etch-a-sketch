@@ -1,32 +1,121 @@
 body {
+    
+    text-align: center;
+    font-family: 'Poppins'
+
+}
+
+p {
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+span {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+
+button {
+    margin: 1rem;
+    height: 3rem;
+    width: 80%;
+    font-size: 1.2rem;
+    border-style: none;
+    background-color: #3b19e7;
+    border-radius: 1.5rem;
+    color: #FFFFFF;
+}
+
+button:hover {
+    transform: scale(1.02);
+    transition: 0.2s;
+}
+
+.main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
+    align-items: fl;
+    max-width: 1040px;   
 }
 
 .container {
     display: flex;
-    flex-direction: column;
-    width: 80%;
+    align-items: flex-start;
+    
 }
 
-.sketchpad {
+.settings {
+    
+    width: 500px;
+    height: 500px;
     border-style: solid;
     border-width: 1px;
     border-color: #CCCCCC;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
+    margin: 1rem;
+    padding: 0.5rem;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
+.mode-options {
+    text-align: left;
 }
 
-.cell {  
+.sketchpad {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #CCCCCC;   
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.slider {
+    
+    -webkit-appearance: none;
     width: 100%;
-    height: 100%;
-    aspect-ratio: 1 / 1;
+    height: 1.5rem;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+  }
+
+.slider::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 25px;
+height: 25px;
+background: #3b19e7;
+cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+width: 25px;
+height: 25px;
+background: #3b19e7;
+cursor: pointer;
+}
+
+@media (max-width: 700px) {
+
+    .settings, .sketchpad {
+        width: 300px;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .sketchpad {
+        height: 300px;
+    }
 }
